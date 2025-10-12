@@ -2,17 +2,17 @@
 # Conditional build:
 %bcond_with	tests		# build without tests
 #
-%define		kdeframever	6.18
+%define		kdeframever	6.19
 %define		qtver		5.15.2
 %define		kfname		bluez-qt
 Summary:	Qt wrapper for Bluez 5 DBus API
 Name:		kf6-%{kfname}
-Version:	6.18.0
+Version:	6.19.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	67f8bb3edb23b9af819b8f49c035e97d
+# Source0-md5:	4823e1b91afa20d743dc310299ed16f9
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
@@ -75,12 +75,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README.md
-%attr(755,root,root) %{_libdir}/libKF6BluezQt.so.*.*.*
+%{_libdir}/libKF6BluezQt.so.*.*.*
 %ghost %{_libdir}/libKF6BluezQt.so.6
 %dir %{_libdir}/qt6/qml/org/kde/bluezqt
 %{_libdir}/qt6/qml/org/kde/bluezqt/qmldir
 %{_libdir}/qt6/qml/org/kde/bluezqt/DevicesModel.qml
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/bluezqt/libbluezqtextensionplugin.so
+%{_libdir}/qt6/qml/org/kde/bluezqt/libbluezqtextensionplugin.so
 %{_datadir}/qlogging-categories6/bluezqt.categories
 %{_datadir}/qlogging-categories6/bluezqt.renamecategories
 %{_libdir}/qt6/qml/org/kde/bluezqt/bluezqtextensionplugin.qmltypes
