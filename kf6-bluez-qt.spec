@@ -36,6 +36,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Qt wrapper for Bluez 5 DBus API.
 
+%description -l pl.UTF-8
+Otoczka Qt do Bluez 5 DBus API.
+
 %package devel
 Summary:	Header files for %{kfname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kfname}
